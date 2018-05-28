@@ -1,0 +1,10 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'store/style.css' %}" />
+
+<header>
+    My Site
+    <a href="{% url 'home' %}">Home</a>.
+</header>
+{% block content %}{% endblock %}
+<footer></footer>
