@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
+from django.views.generic import ListView
 
 from .models import Cart, Store, StoreItem
 
@@ -9,9 +10,9 @@ class CartView(TemplateView):
     model = Cart
 
 
-class StoreView(TemplateView):
+class StoreView(ListView):
     template_name = 'store/store.html'
-    model = Store
+    model = StoreItem
     context_object_name = 'items'
     queryset = StoreItem.objects.all()
 

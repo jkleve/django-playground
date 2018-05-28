@@ -4,9 +4,16 @@
 
 {% block content %}
     <h2>Store</h2>
-    <ul>
+    <div class="store-item-list">
         {% for item in items %}
-            <li>{{ item.name }}</li>
+            <div class="store-item-detail">
+                <h4 class="store-item-name">{{ item.name }}</h4>
+                <div>
+                    <div class="store-item-image">Image</div>
+                    <div class="store-item-info">{{ item.info_text }}</div>
+                </div>
+                <button>Add to Cart</button>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 {% endblock %}
